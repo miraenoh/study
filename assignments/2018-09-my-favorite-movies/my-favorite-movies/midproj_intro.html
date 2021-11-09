@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>intro</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway');
+            @keyframes intro {
+                0% {
+                    opacity : 0;
+                }
+                100% {
+                    opacity : 1;
+                }
+            }
+            body {
+                background-color : black;
+                animation : 4s intro;
+            }
+            #title {
+                font-weight : normal;
+                color : white;
+                font-family: 'Raleway', sans-serif;
+
+                left : 50%;
+                transform : translateX(-50%);
+                
+                text-decoration : none;
+                top : 60%;
+                font-size :30px;
+                position : absolute;
+                text-align : center;
+            }
+            #clip {
+                width : 200px;
+                height : 200px;
+
+                position : absolute;
+                left : 50%;
+                margin-left : -100px;
+                top : 60%;
+                margin-top : -220px;
+
+                background-image : url("clip.png");
+            }
+            #clip:hover {
+                background-image : url("clip_clicked.png");
+            }
+        </style>
+    </head>
+    <body>
+        <a id="title">My Favorite Movies</a>
+        <a href="midproj_main.html"><div id="clip"></div></a>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sunny</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway|Slabo+27pxx');
+            body {
+                background-color : black;
+            }
+            #title {
+                position : absolute;
+                left : 50%;
+                transform : translateX(-50%);
+                top : 20%;
+                
+                font-weight : normal;
+                color : white;
+                font-family: 'Raleway', sans-serif;
+                text-decoration : none;
+                font-size :30px;
+                text-align : center;
+            }
+            #back {
+                width : 16px;
+                
+                position : absolute;
+                top : 20px;
+                left : 20px;
+                
+                opacity : 0.6;
+            }
+            #back:hover {
+                opacity : 1;
+            }
+            .flags {
+                width : 32px;
+                height : 32px;
+
+                position : absolute;
+                top : 20%;
+                margin-top : -40px;
+                
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+            }
+            .flags:hover {
+                filter : grayscale(0%);
+                -webkit-filter : grayscale(0%);
+            }
+            #korea {
+                left : 50%;
+                margin-left : -76px;
+
+                filter : grayscale(0%);
+                -webkit-filter : grayscale(0%);
+            }
+            #us {
+                left : 50%;
+                margin-left : -16px;
+            }
+            #england {
+                left : 50%;
+                margin-left : 44px;
+                
+            }
+            .movieLogo {
+                height : 20px;
+
+                position : absolute;
+                top : 20%;
+                margin-top : 48px;
+
+                opacity : 0.6;
+
+            }
+            .movieLogo:hover, clicked {
+                opacity : 1;
+            }
+            @keyframes logoEntry {
+                0% {
+                    margin-top : 60px;
+                    opacity : 0;
+                }
+            }
+            #logoSunny {
+                left : 50%;
+                transform : translateX(-50%);
+
+                opacity : 1;
+            }
+            #logoMonster {
+                left : 50%;
+                transform : translateX(-50%);
+                margin-left : -150px;
+            }
+            #logoLittle {
+                left : 50%;
+                transform : translateX(-50%);
+                margin-left : 150px;
+            }
+
+            #filmStrip {
+                width : 300px;
+                height : 270px;
+                position : absolute;
+                top : 20%;
+                margin-top : 90px;
+                left : 49%;
+                margin-left : -300px;
+
+                z-index : 100;
+            }
+            .picture {
+                width : 290px;
+                position : absolute;
+                top : 20%;
+                margin-top : 130px;
+                left : 49%;
+                margin-left : -295px;
+
+                z-index : 0;
+            }
+            #contents {
+                background-color : #1B1B1B;
+                width : 300px;
+                height : 270px;
+
+                position : absolute;
+                top : 20%;
+                margin-top : 90px;
+                right : 49%;
+                margin-right : -300px;
+            }
+            p {
+
+                opacity : 0.7;
+
+                color : #B4B4B4;
+                font-size : 12px;
+                font-family: 'Nanum Gothic', sans-serif;
+
+                text-align : center;
+                position : relative;
+                top : 45%;
+                transform : translateY(-50%);
+
+                padding-left : 10px;
+                padding-right : 10px;
+
+                line-height : 1.6 ;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="midproj_intro.html"><img id="back" src="reply.png">
+        <a href="midproj_main_korea.html"><img class="flags" id="korea" src="south-korea.png"></a>
+        <a href="midproj_main_us.html"><img class="flags" id="us" src="united-states.png"></a>
+        <a href="midproj_main_uk.html"><img class="flags" id="england" src="united-kingdom.png"></a>
+        <a id="title" href="midproj_main.html">My Favorite Movies</a>
+        
+        <a href="midproj_main_korea_sunny.html"><img class="movieLogo" id="logoSunny" src="logo_sunny.png"></a>
+        <a href="midproj_main_korea_little.html"><img class="movieLogo" id="logoLittle" src="logo_little.png"></a>
+        <a href="midproj_main_korea_monster.html"><img class="movieLogo" id="logoMonster" src="logo_monster.png"></a>
+        
+        <img id="filmStrip" src="film_strip.png">
+        <img class="picture" src="poster_sunny.png">
+
+        <div id="contents">
+            <p id="introduce">
+                2011년, 잘나가는 사업가 남편과 예쁜 여고생 딸을 둔 임나미. 분명 부족한것 없는 인생이었지만 항상 뭔가가 부족하다고 느꼈다. 그러던 어느날, 입원한 엄마의 문병차 간 병원에서 '하춘화'라는 이름이 새겨진 병실을 발견했고 그곳에서 고교동창 춘화를 만난다. 춘화는 폐암을 앓고있었고 길어야 2개월밖에 못사는 상황. 그녀는 세상을 떠나기전, 흩어진 친구들을 다시 만나는게 소원이라고 했고 오랜만에 만난 옛 친구의 성화를 외면할수 없었던 나미는 흥신소를 동원해 오래전 흩어진 친구들의 행방을 추적하기 시작한다. 그러는 사이 그간 잊고 살던 25년전 과거룰 떠올렸다.
+            </p>
+        </div>
+    </body>
+</html>

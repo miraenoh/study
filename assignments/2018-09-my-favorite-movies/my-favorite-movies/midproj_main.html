@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Favorite Movies</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Raleway|Slabo+27pxx');
+            body {
+                background-color : black;
+            }
+            #title {
+                position : absolute;
+                left : 50%;
+                transform : translateX(-50%);
+                top : 20%;
+                
+                font-weight : normal;
+                color : white;
+                font-family: 'Raleway', sans-serif;
+                text-decoration : none;
+                font-size :30px;
+                text-align : center;
+            }
+            #back {
+                width : 16px;
+                
+                position : absolute;
+                top : 20px;
+                left : 20px;
+
+                opacity : 0.6;
+            }
+            #back:hover {
+                opacity : 1;
+            }
+            .flags {
+                width : 32px;
+                height : 32px;
+
+                position : absolute;
+                top : 20%;
+                margin-top : -40px;
+                
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+            }
+            .flags:hover {
+                filter : grayscale(0%);
+                -webkit-filter : grayscale(0%);
+            }
+            #korea {
+                left : 50%;
+                margin-left : -76px;
+            }
+            #us {
+                left : 50%;
+                margin-left : -16px;
+
+            }
+            #england {
+                left : 50%;
+                margin-left : 44px;
+                
+            }
+            #filmStrip {
+                width : 300px;
+                height : 270px;
+                position : absolute;
+                top : 20%;
+                margin-top : 90px;
+                left : 49%;
+                margin-left : -300px;
+            }
+            #contents {
+                background-color : #1B1B1B;
+                width : 300px;
+                height : 270px;
+
+                position : absolute;
+                top : 20%;
+                margin-top : 90px;
+                right : 49%;
+                margin-right : -300px;
+            }
+            p {
+
+                opacity : 0.7;
+
+                color : #B4B4B4;
+                font-size : 12px;
+                font-family: 'Raleway', sans-serif;
+
+                text-align : center;
+                position : relative;
+                top : 45%;
+                transform : translateY(-50%);
+
+                padding-left : 10px;
+                padding-right : 10px;
+
+                line-height : 1.5 ;
+            }
+            #reference {
+                opacity : 0.7;
+                font-style : italic;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="midproj_intro.html"><img id="back" src="reply.png">
+        <a href="midproj_main_korea.html"><img class="flags" id="korea" src="south-korea.png"></a>
+        <a href="midproj_main_us.html"><img class="flags" id="us" src="united-states.png"></a>
+        <a href="midproj_main_uk.html"><img class="flags" id="england" src="united-kingdom.png"></a>
+        <a id="title" href="midproj_main.html">My Favorite Movies</a>
+        <img id="filmStrip" src="film_strip.png"></img>
+        <div id="contents">
+            <p id="reference">
+                created by Noh Mirae<br><br>
+                icons made by freepik, flaticon.com<br>
+                movie frame by wikimedia.org<br>
+                text scripts from en.wikipedia.org
+            </p>
+        </div>
+    </body>
+</html>
