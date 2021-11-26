@@ -1,0 +1,219 @@
+body,
+input,
+input::placeholder,
+textarea {
+	color: #fff;
+	font-size: 100%;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+	font-family: -apple-system, BlinkMacSystemFont, 'Neue Haas Grotesk Text Pro', 'Helvetica Neue',
+		Helvetica, Arial, sans-serif !important;
+}
+
+.hidden {
+	display: none;
+}
+
+.background {
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+	transition: transform 0.3s ease-out;
+}
+
+.background,
+.background-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.background-item {
+	opacity: 1;
+	transition: transform var(--a-show-full-duration) var(--a-show-full-curve);
+}
+
+.background-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	background-image: url('../img/background-overlay.png');
+	background-size: 100% 100%;
+	opacity: 0.7;
+	transition: opacity 0.3s ease-out;
+}
+
+.apps {
+	opacity: 1;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	transition: opacity 0.3s var(--a-curve);
+}
+
+.apps,
+.full {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.full {
+	height: 100%;
+}
+
+.top-row {
+	height: 60px;
+	display: flex;
+	align-items: flex-start;
+	flex: 0 0 auto;
+}
+
+.top-center,
+.top-left,
+.top-right {
+	position: relative;
+	display: inline-flex;
+	flex: 1 1 auto;
+}
+
+.top-right {
+	min-height: 150px;
+	min-width: 0;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	text-align: right;
+}
+
+.bottom-row {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.center-above,
+.center-below {
+	flex: 1 1 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex: 1 1 auto;
+}
+
+#login,
+.center #clock,
+#greeting,
+.intro {
+	text-align: center;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+
+.center #clock,
+.format,
+#greeting {
+	font-weight: 500;
+}
+
+#clock {
+	cursor: default;
+	font-size: 1050%;
+	letter-spacing: -5px;
+}
+
+#greeting {
+	font-size: 3.375rem;
+}
+
+.focus-outer-wrapper {
+	width: 100%;
+}
+
+.focuses[data-v-1463c36e] {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+
+.focus-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.prompt {
+	padding-bottom: 0.5em;
+	max-width: 87.5%;
+}
+
+.focus-question {
+	font-size: 2.1875em;
+	font-weight: 400;
+	margin: 0;
+	line-height: normal;
+}
+
+.focus-input {
+	width: 100%;
+	padding-top: 4px;
+	display: block;
+	background: 0;
+	border: 0;
+	border-bottom: 2px solid #fff;
+	border-radius: 0;
+	color: #fff;
+	font-size: 2.25em;
+	line-height: 1.2;
+	font-weight: 500;
+	outline: none;
+	text-align: center;
+	transition: border-color 0.2s ease;
+}
+
+#todo-list {
+	text-align: left;
+	list-style: none;
+
+	font-size: 1.5em;
+}
+
+.todo-button {
+	cursor: pointer;
+	font-size: 1em;
+
+	background: transparent;
+	border: 0;
+}
+
+#weather {
+	padding: 1em;
+}
