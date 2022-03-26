@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import Seo from '../components/Seo';
 
+interface HomeProps {
+	movies: [IMovie];
+}
+
 interface IMovie {
 	adult: boolean;
 	backdrop_path: string;
@@ -18,21 +22,10 @@ interface IMovie {
 	vote_count: number;
 }
 
-export default function Home() {
-	const [movies, setMovies] = useState<IMovie[]>([]);
-
-	useEffect(() => {
-		(async () => {
-			const { results } = await (await fetch('/api/movies/popular')).json();
-			setMovies(results);
-			console.log(movies);
-		})();
-	}, []);
-
+export default function Home({ movies }: HomeProps) {
 	return (
 		<div className="container">
 			<Seo title="Home" />
-			{!movies.length && <h4>Loading...</h4>}
 			{movies?.map((movie) => (
 				<div className="movie" key={movie.id}>
 					<img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
@@ -62,4 +55,13 @@ export default function Home() {
 			`}</style>
 		</div>
 	);
+}
+
+export async function getServerSideProps() {
+	const { results: movies } = await (await fetch('http://localhost:3000/api/movies/popular')).json();
+	return {
+		props: {
+			movies
+		}
+	};
 }
