@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Seo from '../components/Seo';
+import { useRouter } from 'next/router';
 
 interface HomeProps {
 	movies: [IMovie];
@@ -23,13 +24,22 @@ interface IMovie {
 }
 
 export default function Home({ movies }: HomeProps) {
+	const router = useRouter();
+	const onClick = (movie: IMovie) => {
+		router.push(`/movies/${movie.original_title}/${movie.id}`);
+	};
+
 	return (
 		<div className="container">
 			<Seo title="Home" />
 			{movies?.map((movie) => (
-				<div className="movie" key={movie.id}>
+				<div key={movie.id} className="movie" onClick={() => onClick(movie)}>
 					<img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
-					<h4>{movie.original_title}</h4>
+					<Link href={`/movies/${movie.original_title}/${movie.id}`}>
+						<a>
+							<h4>{movie.original_title}</h4>
+						</a>
+					</Link>
 				</div>
 			))}
 			<style jsx>{`
@@ -38,6 +48,9 @@ export default function Home({ movies }: HomeProps) {
 					grid-template-columns: 1fr 1fr;
 					padding: 20px;
 					gap: 20px;
+				}
+				.movie {
+					cursor: pointer;
 				}
 				.movie img {
 					max-width: 100%;

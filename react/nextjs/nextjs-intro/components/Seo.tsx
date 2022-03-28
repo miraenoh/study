@@ -7,7 +7,7 @@ interface SeoProps {
 export default function Seo({ title }: SeoProps) {
 	return (
 		<Head>
-			<title>{title} | Nex Movies</title>
+			<title>{title} | Next Movies</title>
 		</Head>
 	);
 }
